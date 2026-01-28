@@ -1,0 +1,5 @@
+first = input('First number = ')
+second = input('Second number = ')
+sum = int(first) + int(second)
+print (f'The sum of {first} + {second} is', sum,'!')
+print (f'The sum is {sum}')
