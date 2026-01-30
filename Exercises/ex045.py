@@ -1,4 +1,5 @@
 import random
+from time import sleep
 
 print('--'*20)
 print('Rock, Paper, Cisor GAME')
@@ -6,6 +7,12 @@ print('--'*20)
 
 cho = int(input('Rock = 1, Paper = 2, Cisor = 3: '))
 pc = random.randint(1, 3)
+
+print ('JO')
+sleep(1)
+print ('KEN')
+sleep(1)
+print ('PO!')
 
 if cho == 1 and pc == 2:
   print ('You choose Rock and the Computer choose Paper, YOU LOST!')
