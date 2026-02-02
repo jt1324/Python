@@ -6,6 +6,7 @@ print ('=-'*12)
 res = ''
 com = random.randint(1, 10)
 tot = 0
+win = 0
 
 while True:
   pla = int(input('Type a number: '))
@@ -19,6 +20,7 @@ while True:
     if eo in 'Ee':
       print ('You WIN!')
       print ("Let's play again...")
+      win += 1
     else:
       print ('You LOSE!')
       break
@@ -30,7 +32,8 @@ while True:
     if eo in 'Oo':
       print ('You WIN!')
       print ("Let's play again...")
+      win += 1
     else:
       print ('You LOSE!')
       break
-print ('Thank you for playing!')
+print (f'Thank you for playing, you won {win} times!')
