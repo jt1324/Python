@@ -1,0 +1,13 @@
+br = ('Botafogo','Chapecoense', 'Vitoria', 'Fluminense', 'Mirassol', 'Bahia', 'Sao paulo', 'Atletico PR', 'Bragantino', 'Palmeiras', 'Corinthians')
+
+print ('-='*20)
+print (f'Brazilian national table: {br}')
+print ('-='*20)
+print (f'The top 5 teams: {br[:5]}.')
+print ('-='*20)
+print (f'The last 4 teams are: {br[-4:]}.')
+print ('-='*20)
+print (f'The alfabetic order is: {sorted(br)}.')
+print ('-='*20)
+print (f'Chapecoense is in position {br.index('Chapecoense')+1}.')
+print ('-='*20)
