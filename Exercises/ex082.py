@@ -8,6 +8,7 @@ while True:
   c = str(input('Do you want to continue? [S/N]: ')).strip().upper()[0]
   if c == 'N':
     break
+print ('--'*15)
 print (f'The complete list is {l1}')
 
 for l in l1:
