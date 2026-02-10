@@ -1,0 +1,33 @@
+import math
+
+mai = []
+nam = []
+gra = []
+
+while True:
+  n = str(input('Name: ')).strip()
+  nam.append(n)
+  g1 = float(input('Grade 1: '))
+  gra.append(g1)
+  g2 = float(input('Grade 2: '))
+  gra.append(g2)
+  nam.append(gra)
+  mai.append(nam)
+  gra = []
+  nam = []
+  c = str(input('Do you want to continue? [Y/N]: ')).strip().upper()[0]
+  if c == 'N':
+    break
+print('=-'*20)
+print('Numb  Name   Grade Avg')
+print('--'*15)
+for i, v in enumerate(mai):
+  print (f'{i:^3} {v[0]:^10} {(sum(v[1]))/len(v[1]):^4}')
+print('--'*15)
+while True:
+  n = int(input('Show grades of which student? (999 stops): '))
+  if n == 999:
+    break
+  else:
+    print (f"{mai[n][0]}'s grades are: {mai[n][1]}")
+print ('--  Thank you!  --')
