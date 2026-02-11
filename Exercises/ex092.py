@@ -23,3 +23,8 @@ else:
   print (f'The salary is: £{data['salary']}')
   print (f'Will retire at the age {(data['year']+35)-(date.today().year - data['age'])}')
 print ('=-'*20)
+
+# --------------
+
+for k, v in data.items():
+  print (f' - {k} has the info {v}')
