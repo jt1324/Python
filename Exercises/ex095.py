@@ -4,7 +4,6 @@ goals = []
 
 print ('=-'*20)
 while True:
-  # info.clear()
   info['name'] = str(input("Player's name: "))
   gam = int(input(f'How many games {info['name']} played? '))
   goals.clear()
@@ -26,9 +25,7 @@ print ('=-'*20)
 print (f'{'cod':3} {'name':<10} {'goals':<10} {'total':<5}')
 print('--'*18)
 for i, v in enumerate(data):
-  # for i, v in enumerate(p.values()):
-    print (f'{i:>3} {v['name']:<10} {str(v['goals']):<10} {v['total']:<5}')
-    # print (f'{i+1:>3} {v[0]:<15} {v[1]:<10} {v[2]:<5} ', end='')
+  print (f'{i:>3} {v['name']:<10} {str(v['goals']):<10} {v['total']:<5}')
 print('--'*18)
 while True:
   while True:
