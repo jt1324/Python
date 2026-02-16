@@ -8,22 +8,22 @@ def con(n1, n2, n3):
     print(f'Counting from {n1} to {n2} in increments of {n3}')
     if n2 <= 0:
       for c in range(n1, n2-1, -n3):
-        print(f'{c} ', end=' ')
-        # sleep(0.5)
+        print(f'{c} ', end=' ', flush=True)
+        sleep(0.25)
     else:
       for c in range(n1, n2+1, -n3):
-        print(f'{c} ', end=' ')
-        # sleep(0.5)
+        print(f'{c} ', end=' ', flush=True)
+        sleep(0.25)
   else:
     print(f'Counting from {n1} to {n2} in increments of {n3}')
     if n2 <= 0:
       for c in range(n1, n2-1, n3):
-        print(f'{c} ', end=' ')
-        # sleep(0.5)
+        print(f'{c} ', end=' ', flush=True)
+        sleep(0.25)
     else:
       for c in range(n1, n2+1, n3):
-        print(f'{c} ', end=' ')
-        # sleep(0.5)
+        print(f'{c} ', end=' ', flush=True)
+        sleep(0.25)
   print('FIM!')
   print('-='*20)
 
