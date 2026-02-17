@@ -3,12 +3,13 @@ def data(p='unknown', g=0):
 
 
 pla = str(input("Player's name: "))
-if pla == '':
-  pla = 'unknown'
 go = str(input('Goals scored: '))
 if go.isnumeric():
   go = int(go)
 else:
   go = 0
-
-data(pla, go)
+if pla.strip() == '':
+  data(g = go)
+else:
+  data(pla, go)
+  
