@@ -12,7 +12,8 @@ def grades(*num, sit=False):
       info['situation'] = 'BAD'
     else:
       info['situation'] = 'OK'
+  return info
 
 res = grades(7.5, 3, 6.5, sit=True)
 print (res)
-print (info)
+# print (info)
