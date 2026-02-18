@@ -5,7 +5,7 @@ def grades(*num, sit=False):
   info['higher'] = max (num)
   info['smaller'] = min (num)
   info['average'] = sum (num)/len (num)
-  if sit == True:
+  if sit:
     if info['average'] >= 7:
       info['situation'] = 'GOOD'
     elif info['average'] < 5:
@@ -14,6 +14,6 @@ def grades(*num, sit=False):
       info['situation'] = 'OK'
   return info
 
-res = grades(7.5, 3, 6.5, sit=True)
+res = grades(7.5, 3, 6.5, 9,  sit=True)
 print (res)
 # print (info)
