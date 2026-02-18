@@ -1,19 +1,32 @@
 from time import sleep
 
+c = ('\033[m',
+     '\033[0;30;41m',
+     '\033[0;30;42m',
+     '\033[0;30;43m',
+     '\033[7;30m'
+     );
+
+def title(msg, col=0):
+  siz = len(msg) + 2
+  print (c[col], end='')
+  print ('~'*siz)
+  print (msg)
+  print ('~'*siz)
+  print (c[0], end='')
+
 def hel():
   while True:
-    print ('~~'*10)
-    print (' HELP SYSTEM PyHELP')
-    print ('~~'*10)
-    sub = str(input(' Help subject: '))
-    if sub == 'end':
+    title(' HELP SYSTEM PyHELP', 2)
+    sub = str(input('  Help subject: '))
+    if sub.upper() == 'END':
       break
     sleep(0.5)
-    print ('~~'*12)
-    print (f' Accessing {sub} manual')
-    print ('~~'*12)
+    title(f'  Accessing {sub} manual')
     sleep(0.5)
+    print (c[4], end='')
     help(sub)
-  print ('Thank you!')
+    print (c[0], end='')
+  title('  Thank you!', 1)
 
 hel()
