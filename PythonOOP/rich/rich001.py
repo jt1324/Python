@@ -1,5 +1,7 @@
 from rich import print
 
+# Emojis
+
 print('hello world!')
 print('Hellow [red]world[/red]! :earth_americas:')
 print('Ola, [bold blue]Pequeno Gafanhoto[/] :vulcan_salute:')
