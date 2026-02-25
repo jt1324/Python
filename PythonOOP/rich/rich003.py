@@ -1,6 +1,8 @@
 from rich import print
 from rich.table import Table
 
+# Tables
+
 table = Table(title="Prices Table")
 
 table.add_column("Name", justify="right", style="green")
