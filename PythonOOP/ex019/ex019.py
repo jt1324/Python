@@ -17,7 +17,7 @@ class Book:
       rang = self.pages - self.current_page
     else:
       rang = pas
-    for p in range(rang):
+    for _ in range(rang):
       self.current_page += 1
       print (f"Pg{self.current_page} :arrow_forward:  ", end='')
       sleep(0.35)
