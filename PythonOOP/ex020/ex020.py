@@ -13,7 +13,7 @@ class Gamer:
   
   def data(self):
     games_list = '\n'.join([f":video_game: [blue]{game}[/]" for game in sorted(self.games)])
-    print(Panel(f"Real name: [bold blue on white]{self.name}[/]\nFavorite games:\n{games_list}", title=f"Player <{self.nick}>"))
+    print(Panel(f"Real name: [bold blue on white]{self.name}[/]\nFavorite games:\n{games_list}", title=f"Player <{self.nick}>"))3
   
 p1 = Gamer('Jean Toneli', 'JC_destroyer')
 p1.add_fav('Puzzle & Survival')
