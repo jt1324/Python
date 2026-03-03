@@ -10,7 +10,7 @@ class Control:
   def tur(self):
     while True:
       if self.power == False:
-        print (Panel('The TV is off', title=' [ TV ]', width=30))
+        print (Panel('[red]The TV is off[/]', title=' [ TV ]', width=30))
         print ('\n< CH1 >   - VOL2 +   ', end='')
       else:
         # Build channel display with yellow background on current channel
