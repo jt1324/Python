@@ -13,7 +13,7 @@ class Check:
     self.qty = qty
 
   def bbq(self):
-    return Panel(f"Checking [green]{self.title}[/] with [blue]{self.qty} people[/]\nEach person will eat {self.weight_per_person}Kg and the Kg cost is £{self.price_per_kg:,.2f}\nRecomended buy [blue]{self.qty * self.weight_per_person}[/]Kg of meat\nThe total cost will be [green]£{((self.qty * self.weight_per_person) * self.price_per_kg):,.2f}[/]\nEach person will pay [yellow]£{(((self.qty * self.weight_per_person) * self.price_per_kg) / self.qty):,.2f}[/] to join.", title=f'{self.title}')
+    return Panel(f"Checking [green]{self.title}[/] with [blue]{self.qty} people[/]\nEach person will eat {self.weight_per_person} Kg and the Kg cost is £{self.price_per_kg:,.2f}\nRecomended buy [blue]{self.qty * self.weight_per_person}[/] Kg of meat\nThe total cost will be [green]£{((self.qty * self.weight_per_person) * self.price_per_kg):,.2f}[/]\nEach person will pay [yellow]£{(((self.qty * self.weight_per_person) * self.price_per_kg) / self.qty):,.2f}[/] to join.", title=f'{self.title}')
   
 
 bbq1 = Check('Friends BBQ', 50)
