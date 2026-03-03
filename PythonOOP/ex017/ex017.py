@@ -8,7 +8,8 @@ class Product:
     self.price = price
 
   def stamp(self):
-    return Panel(f"         {self.name} \n-----------------------------------\n............ £{self.price:,.2f} ............", title="Product", width=40)
+    price_str = f"£{self.price:,.2f}"
+    return Panel(f"{self.name.center(40, ' ')}\n{'-' * 40}\n{price_str.center(40, '-')}", title="Product", width=44)
     
 
 p1 = Product ("iPhone 17 Pro Max", 1999.99)
