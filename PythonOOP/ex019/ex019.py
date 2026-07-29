@@ -29,4 +29,4 @@ class Book:
 b1 = Book("10 thinkg I've learned", 20)
 b1.pass_pages(5)
 b1.pass_pages(10)
-b1.pass_pages(10)
+b1.pass_pages(20)
