@@ -22,7 +22,7 @@ class Student(People):                           # Derived class | Subclass | Ch
         print(f"{self.name} is enrolled in {self.classroom} grade {self.grade}")
 
     def study(self):
-        pass
+        print(f"{self.name} is studing {self.grade} in {self.classroom}")
 
 
 class Teacher(People):                           # Derived class | Subclass | Child class | Class Derived | Class Son
@@ -35,7 +35,7 @@ class Teacher(People):                           # Derived class | Subclass | Ch
         print(f"{self.name} is teaching {self.especialty} at {self.level} level")
     
     def study(self):
-        pass
+        print(f"{self.name} is specializing in {self.especialty} at {self.level} level")
 
 
 class Employee(People):                           # Derived class | Subclass | Child class | Class Derived | Class Son  
@@ -48,4 +48,4 @@ class Employee(People):                           # Derived class | Subclass | C
         print(f"{self.name} is working as {self.position} in the {self.sector} sector")
 
     def study(self):
-        pass
+        print(f"{self.name} is learning about {self.position} in the {self.sector} sector")
