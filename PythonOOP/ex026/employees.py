@@ -29,7 +29,7 @@ class EmployeeHour(Employee):
         self.salary = (self.value_hour * self.hours_worked) * (1 - self.nin)
 
     def analyse_salary(self):
-        panel = Panel(f"[blue]{self.name}'s[/blue] salary [magenta](Hourly Employee)[/magenta] is [green]£{self.salary:.2f}[/green] and correspond to [yellow]{self.salary/self.min_wage:.1f} minimum wages[/yellow].", title = "Salary Analysis", width = 50, expand = False, border_style = "green")
+        panel = Panel(f"[blue]{self.name}'s[/blue] salary [magenta](Hourly Employee)[/magenta] is [green]£{self.salary:.2f}[/green] and correspond to [yellow]{self.salary/self.min_wage:.1f} minimum wages[/yellow].", title = "Salary Analysis", width = 50, expand = False, border_style = "light_green")
         print(panel)
 
 
@@ -42,5 +42,5 @@ class EmployeeMonth(Employee):
         self.salary =  self.gross_salary * (1 - self.nin)
 
     def analyse_salary(self):
-        panel = Panel(f"[blue]{self.name}'s[/blue] salary [magenta](Monthly Employee)[/magenta] is [green]£{self.salary:.2f}[/green] and correspond to [yellow]{self.salary/self.min_wage:.1f} minimum wages[/yellow].", title = "Salary Analysis", width = 50, expand = False, border_style = "green")
+        panel = Panel(f"[blue]{self.name}'s[/blue] salary [magenta](Monthly Employee)[/magenta] is [green]£{self.salary:.2f}[/green] and correspond to [yellow]{self.salary/self.min_wage:.1f} minimum wages[/yellow].", title = "Salary Analysis", width = 50, expand = False, border_style = "light_green")
         print(panel)
