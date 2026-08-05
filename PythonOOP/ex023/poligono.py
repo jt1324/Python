@@ -2,35 +2,35 @@ from abc import ABC, abstractmethod
 import math
 
 class Poligono(ABC):
-    def __init__(self, perimeter, area):
-        self.perimeter = perimeter
-        self.area = area
+    def __init__(self, qty_sides):
+        self.qty_sides = qty_sides
+        
     
     @abstractmethod
-    def qt_sides(self):
+    def perimeter(self):
+        pass
+
+    @abstractmethod
+    def area(self):
         pass
 
 
 class Square(Poligono):
-    def __init__(self, side):
+    def __init__(self, side = 1):
+        super().__init__(4)
         self.side = side
 
-    def qt_sides(self):
-        return 4
-
     def perimeter(self):
-        return 4 * self.side
+        return self.side * 4
 
     def area(self):
         return self.side ** 2
 
 
 class Circle(Poligono):
-    def __init__(self, radius):
+    def __init__(self, radius = 1):
+        super().__init__(0)
         self.radius = radius
-
-    def qt_sides(self):
-        return 0
 
     def perimeter(self):
         return 2 * math.pi * self.radius

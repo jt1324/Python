@@ -1,4 +1,5 @@
 from abc import abstractmethod
+from os import name
 from rich import print
 from random import randint
 from abc import ABC
@@ -29,7 +30,7 @@ class Persona(ABC):
 
 
 class Warrior():
-    def __init__(self):
+    def __init__(self, name):
         pass
     
     def heal(self):
@@ -37,7 +38,7 @@ class Warrior():
 
     
 class Wizard():
-    def __init__(self):
+    def __init__(self, name):
         pass
 
     def heal(self):
