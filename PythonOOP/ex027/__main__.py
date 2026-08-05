@@ -1,6 +1,6 @@
 from persona_rpg import *
 
-def man():
+def main():
     p1 = Warrior("Kratos", 2000)
     p2 = Wizard("Merlin", 3000)
 
