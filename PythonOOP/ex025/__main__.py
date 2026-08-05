@@ -20,7 +20,7 @@ def main():
         table.add_row(
             type(delivery).__name__,
             str(distance),
-            "Not available" if delivery.cost() == 0 else f"{delivery.cost():.2f}",
+            "Not available" if delivery.cost() == 0 else f"£{delivery.cost():.2f}",
         )
 
     print(table)
