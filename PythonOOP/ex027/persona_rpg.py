@@ -17,12 +17,11 @@ class Persona(ABC):
         if self.live > 0 and target.live > 0:
             blow = self.blows[random.randrange(0, len(self.blows))]
             print(f"[green]{self.name}[/green]([light_green]{self.live}[/light_green]) attacked [red]{target.name}[/red]([light_green]{target.live}[/light_green]) with a [blue]{blow}[/blue] of power [light_green]{power}[/light_green].") 
+            target.take_damage(power)
         else:
             print(f"The attack {self.name} -> {target.name} can't hapen.")
         
-
-
-    def take_demage(self, demage):
+    def take_damage(self, demage):
         dam = random.randint(0, demage)
         self.live = self.live - dam
         if self.live < 0:
