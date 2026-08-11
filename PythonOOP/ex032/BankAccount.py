@@ -20,8 +20,9 @@ class BankAccount:
     self.__balance += amount
     print(f"Deposit of £{amount:,.2f} confirmed to account {self._id}.")
 
-  def withd(self, amount):
-    password = self.ask_password()
+  def withd(self, amount, password=None):
+    if password is None:
+      password = self.ask_password()
     if self.password_check(password):
         if amount > self.__balance:
             print(f'Insufficient balance for this withdrwal. Your balnace is £{self.__balance:,.2f}.')
