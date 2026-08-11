@@ -2,7 +2,7 @@ from Retangule import *
 from rich import print, inspect
 
 def main():
-    r = Retangule(8,4)
+    r = Retangule(8,-4)
 
     inspect(r)
 

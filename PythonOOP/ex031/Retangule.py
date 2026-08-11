@@ -9,11 +9,17 @@ class Retangule:
 
     @property
     def base(self):
-        return self._base
+        if self._base < 0:
+            print(f"[red]Value invalid for the base[/]")
+        else:
+            return self._base
     
     @property
     def height(self):
-        return self._height
+        if self._height < 0:
+            print(f"[red]Value invalid for the height[/]")
+        else:
+            return self._height
 
     @property
     def area (self):
