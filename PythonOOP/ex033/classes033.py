@@ -2,10 +2,9 @@ from rich import print
 from abc import ABC, abstractmethod
 
 class People(ABC):
-    def __init__ (self, name, birth, course):
+    def __init__ (self, name, birth):
         self._name = name
         self._birth = birth
-        self.course = course
 
     @property
     def birth(self):
@@ -30,6 +29,21 @@ class People(ABC):
 
 
 class Student(People):
-    pass
+    def __init__ (self, name, birth, course):
+        super().__init__(name, birth)
+        self._course = course
+        self.official_courses = ["IT", "BUSINESS", "DESIGN", "FINANCE"]
 
+    @property
+    def course(self):
+        return self._course
 
+    @course.setter
+    def course(self, course):
+        if course not in self.official_courses:
+            print (f"{course} is not a valid course")
+        else:
+            self._course = course
+    
+    def add_course(self, course):
+        self.official_courses.append(course)
