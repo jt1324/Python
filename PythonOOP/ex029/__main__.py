@@ -9,7 +9,10 @@ def main():
     d.write("You're nice")
     d.write("You like Python")
 
-    d.read("Dunha")
+    try:
+        d.read("ter")
+    except Exception as e:
+        print(f"There was an error: {e}")
 
     inspect(d, private=True, methods=True)
 
