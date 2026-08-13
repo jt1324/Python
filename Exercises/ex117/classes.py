@@ -25,3 +25,12 @@ class Chicken(Animal):
 class Duck(Animal):
     def make_sound(self):
         print(f"{self.name} is making a quack sound")
+
+
+class Yorkshire(Dog):
+    def make_sound(self):
+        print(f"{self.name} is making a yorkshire bark sound")
+
+class Pitbull(Dog):
+    def make_sound(self):
+        print(f"{self.name} is making a pitbull bark sound")
