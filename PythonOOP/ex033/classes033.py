@@ -1,27 +1,28 @@
 from rich import print
 from abc import ABC, abstractmethod
+from datetime import date
 
 class People(ABC):
     def __init__ (self, name, birth):
         self._name = name
-        self._birth = birth
+        self._birth = None
+        self.birth = birth
 
     @property
     def birth(self):
         return self._birth
 
     @birth.setter
-    def birth(self, birth):
-        if birth > 2026:
-            print (f"{self._birth} is not a valid birth year")
-        elif birth <= 1900:
-            print (f"{self._birth} is not a valid birth year")
+    def birth(self, year:int):
+        if year > date.today().year or year < 1900:
+            print (f"{year} is not a valid birth year")
         else:
-            self._birth = birth
+            self._birth = year
+            print (f"Birth year changed to {year}")
 
     @property
     def age(self):
-        return 2026 - self._birth
+        return date.today().year - self._birth
 
     @age.setter
     def age(self, value):
@@ -29,21 +30,22 @@ class People(ABC):
 
 
 class Student(People):
-    def __init__ (self, name, birth, course):
+    official_courses = ["IT", "BUSINESS", "DESIGN", "FINANCE"]
+    def __init__ (self, name:str, birth:int, course:str = None):
         super().__init__(name, birth)
-        self._course = course
-        self.official_courses = ["IT", "BUSINESS", "DESIGN", "FINANCE"]
+        self._course = None
+        self.course = course
 
     @property
     def course(self):
         return self._course
 
     @course.setter
-    def course(self, course):
+    def course(self, course:str):
         if course not in self.official_courses:
             print (f"{course} is not a valid course")
         else:
             self._course = course
     
-    def add_course(self, course):
+    def add_course(self, course:str):
         self.official_courses.append(course)
