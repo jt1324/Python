@@ -3,13 +3,13 @@ import hashlib
 import pwinput
 
 class BankAccount:
-  def __init__(self, id, name, balance=0, password=None):
+  def __init__(self, id:int, name:str = None, balance:float = 0, password:str = None):
     self._id = id
     self._name = name
     self.__balance = balance
-    self.__hash = ""
+    
     if password is None:
-      password = pwinput.pwinput(prompt="Enter a password: ", mask="*")
+      password = self.ask_password()
     self.__hash = hashlib.sha256(password.encode()).hexdigest()
     print(f"Account {self._id} created succesfully. Ballance £{self.__balance:,.2f}.")
 
@@ -54,4 +54,10 @@ class BankAccount:
       return False
 
   def ask_password(self):
-    return pwinput.pwinput(prompt="Enter a password: ", mask="*")
+    
+    while True:
+      password = str(pwinput("Enter the password: ")).strip()
+      if len(password) >=6:
+        break
+    
+    return password
