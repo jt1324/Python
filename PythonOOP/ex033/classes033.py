@@ -43,9 +43,13 @@ class Student(People):
     @course.setter
     def course(self, course:str):
         if course not in self.official_courses:
-            print (f"{course} is not a valid course")
+            print (f"{course} is not an official course")
         else:
             self._course = course
     
     def add_course(self, course:str):
-        self.official_courses.append(course)
+        if course in self.official_courses:
+            print (f"{course} is already an official course")
+        else:
+            self.official_courses.append(course)
+            print (f"{course} added to official courses")
