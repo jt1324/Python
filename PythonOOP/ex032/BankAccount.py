@@ -33,7 +33,8 @@ class BankAccount:
     self.__balance += amount
     print(f"Deposit of £{amount:,.2f} confirmed to account {self._id}.")
 
-  def withd(self, amount, password=None):
+  def withd(self, amount:float, password:str = None):
+    amount = abs(amount)
     if password is None:
       password = self.ask_password()
     if self.password_check(password):
@@ -45,7 +46,7 @@ class BankAccount:
     else:
       print("Invalid password")
 
-  def password_check(self, password):
+  def password_check(self, password:str):
     if self.__hash == hashlib.sha256(password.encode()).hexdigest():
       print("Password correct")
       return True
