@@ -1,22 +1,27 @@
+from rich import print
+from abc import ABC, abstractmethod
 
+class Animal(ABC):
+    def __init__(self, name:str):
+        self.name = name
 
-class Animal:
-    def __init__(self, make_sound):
-        self.make_sound = make_sound
-
+    @abstractmethod
+    def make_sound(self):
+        print(f"{self.name} is a {self.__class__.__name__} and is making a sound")
 
 class Cat(Animal):
-    def __init__(self, make_sound):
-        super().__init__(make_sound)
+    def make_sound(self):
+        print(f"{self.name} is making a meow sound")
 
 class Dog(Animal):
-    def __init__ (self, make_sound):
-        super().__init__(make_sound)
+    def make_sound(self):
+        print(f"{self.name} is making a bark sound")
+
 
 class Chicken(Animal):
-    def __init__ (self, make_sound):
-        super().__init__(make_sound)
+    def make_sound(self):
+        print(f"{self.name} is making a cluck sound")
 
 class Duck(Animal):
-    def __init__ (self, make_sound):
-        super().__init__(make_sound)
+    def make_sound(self):
+        print(f"{self.name} is making a quack sound")
