@@ -12,5 +12,6 @@ def main():
 
 
 
-if __name__ == "__main__":
+    e.make_sound()
+    f.make_sound()
     main()
