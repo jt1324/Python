@@ -9,7 +9,18 @@ def main():
     d = Paper()
     e = House()
 
+    try_fold(a)
+    try_fold(b)
+    try_fold(c)
+    try_fold(d)
+    try_fold(e)
 
+
+    print(a)
+    print(b)
+    print(c)
+    print(d)
+    print(e)
 
 
 
