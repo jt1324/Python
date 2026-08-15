@@ -1,9 +1,15 @@
 from classes import *
-from rich import rich
+from rich import print
 
 
 def main():
-    pass
+    a = Number(200)
+    b = Text("Python")
+    c = List([1, 2, 3])
+    d = Paper()
+    e = House()
+
+
 
 
 
