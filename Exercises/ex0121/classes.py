@@ -14,3 +14,16 @@ class Company:
 class Egg:
     def open(self):
         print("Break the shell")
+
+
+class Rock:
+    pass
+
+
+# Pythonic Polymorphic method Duck Typing
+
+def try_open(object):
+    try:
+        object.open()
+    except:
+        print(f"I found issues when trying to open the {object.__class__.__name__}")
